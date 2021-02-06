@@ -3,7 +3,7 @@
 
 #include "xglobal.h"
 
-class XEXPORT XSocket
+class XSocket
 {
 public:
     XSocket();
