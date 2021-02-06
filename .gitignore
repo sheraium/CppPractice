@@ -1,0 +1,12 @@
+.idea
+.vs
+
+bin/
+debug/
+release/
+
+.qmake.stash
+makefile
+makefile.Debug
+makefile.Release
+*.user
