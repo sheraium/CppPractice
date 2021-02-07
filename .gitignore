@@ -4,6 +4,9 @@
 bin/
 debug/
 release/
+out/
+cmake-build-debug/
+cmake-build-release/
 
 .qmake.stash
 makefile
