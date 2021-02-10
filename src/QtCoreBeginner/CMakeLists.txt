@@ -12,9 +12,11 @@ set(REQUIRED_LIBS Core Widgets)
 set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Widgets)
 
 add_executable(${PROJECT_NAME} main.cpp
-        animal.cpp
-        freezer.h
-        microwave.h)
+        radio.cpp
+        station.cpp
+        source.cpp
+        destination.cpp)
+
 
 if (NOT CMAKE_PREFIX_PATH)
     message(WARNING "CMAKE_PREFIX_PATH is not defined, you may need to set it "
