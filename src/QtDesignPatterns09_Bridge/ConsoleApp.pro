@@ -4,7 +4,9 @@ INCLUDEPATH += $$PWD/../../include
 
 #HEADERS += \
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    advancedlogger.cpp \
+    simplelogger.cpp
 
 CONFIG += console
 #CONFIG += staticlib
@@ -12,3 +14,8 @@ CONFIG += console
 
 DESTDIR += ./bin
 TARGET = ConsoleApp
+
+HEADERS += \
+    advancedlogger.h \
+    interfaces/iLogger.h \
+    simplelogger.h
