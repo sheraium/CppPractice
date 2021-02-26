@@ -4,7 +4,7 @@ INCLUDEPATH += $$PWD/../../include
 
 #HEADERS += \
 
-SOURCES += main.cpp \ \
+SOURCES += main.cpp \
     cat.cpp \
     dog.cpp
 
