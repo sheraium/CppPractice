@@ -4,8 +4,9 @@ INCLUDEPATH += $$PWD/../../include
 
 #HEADERS += \
 
-SOURCES += main.cpp \ \
-    test.cpp
+SOURCES += main.cpp \
+    test.cpp \
+    testb.cpp
 
 CONFIG += console
 #CONFIG += staticlib
@@ -15,4 +16,5 @@ DESTDIR += ./bin
 TARGET = ConsoleApp
 
 HEADERS += \
-    test.h
+    test.h \
+    testb.h

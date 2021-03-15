@@ -1,18 +1,21 @@
 #include "test.h"
 
-test::test(QObject *parent) : QObject(parent) {
+test::test(QObject* parent) : QObject(parent) {
     number = 0;
     timer.setInterval(1000);
     connect(&timer, &QTimer::timeout, this, &test::timeout);
 }
 
 void test::timeout() {
-    number++;
-    qInfo() << QTime::currentTime().toString(Qt::DateFormat::SystemLocaleLongDate);
-    if (number == 5) {
-        timer.stop();
-        qInfo() << "Complete!";
-    }
+//    number++;
+//    qInfo() << QTime::currentTime().toString(Qt::DateFormat::SystemLocaleLongDate);
+//    if (number == 5) {
+//        timer.stop();
+//        qInfo() << "Complete!";
+//    }
+    qInfo() << "AAA" << QTime::currentTime().toString(Qt::DateFormat::SystemLocaleLongDate);
+    QThread::sleep(5);
+
 }
 
 void test::doStuff() {

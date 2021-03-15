@@ -5,11 +5,12 @@
 #include <QDebug>
 #include <QTimer>
 #include <QTime>
+#include <QThread>
 
 class test : public QObject {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit test(QObject *parent = nullptr);
+    explicit test(QObject* parent = nullptr);
 
 signals:
 
