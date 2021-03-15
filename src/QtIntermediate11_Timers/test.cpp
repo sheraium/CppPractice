@@ -13,7 +13,7 @@ void test::timeout() {
 //        timer.stop();
 //        qInfo() << "Complete!";
 //    }
-    qInfo() << "AAA" << QTime::currentTime().toString(Qt::DateFormat::SystemLocaleLongDate);
+    qInfo() << "TestA" << QThread::currentThread() << QTime::currentTime().toString(Qt::DateFormat::SystemLocaleLongDate);
     QThread::sleep(5);
 
 }

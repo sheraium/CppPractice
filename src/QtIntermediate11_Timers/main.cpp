@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QTimer>
+#include <QThread>
 
 #include "test.h"
 #include "testb.h"
@@ -15,12 +16,16 @@ int main(int argc, char* argv[]) {
     QCoreApplication a(argc, argv);
 //    QTimer::singleShot(5000, &print);
 
+    QThread thread(&a);
+
     test t;
-    t.doStuff();
-
     TestB b;
-    b.doStuff();
 
+    t.moveToThread(&thread);
+    thread.start();
+
+    t.doStuff();
+    b.doStuff();
 
     return a.exec();
 }
