@@ -16,6 +16,10 @@ struct Man {
 int main(int argc, char *argv[]) {
     QCoreApplication a(argc, argv);
 
+    double value = 1.2345;
+    QString str = QString::number(value, 'f', 0);
+
+
     int num[] = {1,2,3,4,5,6,7,8,9,10};
 
     auto first = from(num).first();
@@ -39,7 +43,7 @@ int main(int argc, char *argv[]) {
     QMap<QString, Man> map;
     map.insert("Kevin", Kevin);
     map.insert("Anton", Anton);
-    map.insert("Kevin", Terra);
+    map.insert("Terra", Terra);
 
     foreach(auto d, map){
         qInfo() << d.name;
@@ -47,6 +51,8 @@ int main(int argc, char *argv[]) {
 
     try {
         auto data = from(map)
+                .orderBy([](const Man &man){return man.age;})
+                .where([](const Man &man){return man.age>=17;})
                 .select([](const Man &man){ return man; })
                 .toStdList();
 
