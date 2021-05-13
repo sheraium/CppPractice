@@ -1,4 +1,5 @@
-QT += widgets
+QT += widgets \
+      concurrent
 INCLUDEPATH += $$PWD/../../include
 #LIBS += -L../../lib -l
 

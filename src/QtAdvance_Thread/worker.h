@@ -6,6 +6,9 @@
 #include <QDebug>
 #include <QDateTime>
 
+#include <QFuture>
+#include <QtConcurrent>
+
 class Worker : public QObject {
 Q_OBJECT
 public:
@@ -14,7 +17,8 @@ public:
     virtual ~Worker();
 
     void start();
-
+    QFuture<int> GetValue();
+    int getValue();
 
 signals:
 
@@ -24,6 +28,7 @@ public slots:
 
 private:
     QTimer timer;
+
 
 };
 
