@@ -13,3 +13,5 @@ makefile
 makefile.Debug
 makefile.Release
 *.user
+*.obj
+*.exe
