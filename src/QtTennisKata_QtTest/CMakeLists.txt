@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17)
 project(ConsoleApp)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_PREFIX_PATH "C:\\Qt\\Qt5.14.2\\5.14.2\\msvc2017\\lib\\cmake\\Qt5")
+set(CMAKE_PREFIX_PATH "C:\\Qt\\5.15.2\\msvc2019_64\\lib\\cmake\\Qt5")
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)

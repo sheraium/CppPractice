@@ -19,4 +19,3 @@
 #include "TennisTests.h"
 
 QTEST_MAIN(TennisTests);
-
